@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101829" />
+  <meta name="description" content="Oficina gratuita, ilustrada e passo a passo: crie seu primeiro agente de IA no Google Gemini, sem precisar programar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Meu Primeiro Agente — Oficina prática com Gemini" />
+  <meta property="og:description" content="Aprenda em duas missões: crie um assistente com sua turma e depois personalize o seu. Sem programação." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Meu Primeiro Agente | Oficina prática com Gemini</title>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="top-ribbon"><span class="ribbon-dot"></span> OFICINA PRÁTICA · PASSO A PASSO NO COMPUTADOR <span class="ribbon-right">SEM PROGRAMAÇÃO</span></div>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início"><span class="brand-mark"><span>✦</span></span><span>MEU <strong>PRIMEIRO AGENTE</strong></span></a>
+      <nav class="header-nav" aria-label="Navegação principal"><a href="#missao-1">Missão 01</a><a href="#missao-2">Missão 02</a><a href="#ajuda">Preciso de ajuda</a></nav>
+      <button id="focus-mode" type="button" class="focus-toggle" aria-pressed="false" title="Deixar somente as atividades visíveis">◫ <span>Modo foco</span></button>
+      <a class="header-cta" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Abrir Gemini <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="read-progress" aria-hidden="true"><div id="read-progress-fill"></div></div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-mesh" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="sparkle">✧</span> SUA JORNADA NA INTELIGÊNCIA ARTIFICIAL COMEÇA AQUI</div>
+          <h1 id="hero-title">Meu primeiro<br/><em>agente de IA.</em></h1>
+          <p class="hero-sub">Hoje você vai ensinar uma inteligência artificial a ajudar em uma tarefa. Primeiro, faremos juntos. Depois, você vai criar a <strong>sua própria versão.</strong></p>
+          <div class="hero-tags"><span>⌘ No computador</span><span>✳ Para iniciantes</span><span>◷ Cerca de 50 minutos</span></div>
+          <div class="hero-actions"><a class="btn btn-primary" href="#preparacao">Começar a oficina <span aria-hidden="true">→</span></a><a class="btn btn-ghost" href="#demo-lab">Experimentar o agente <span aria-hidden="true">✦</span></a></div>
+          <p class="hero-assurance"><span aria-hidden="true">●</span> Uma página para acompanhar. Outra para praticar no Gemini.</p>
+        </div>
+        <div class="hero-visual" aria-label="Ilustração de um assistente virtual com balões de conversa">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="visual-card glass-small top-message"><span class="message-symbol">✎</span><span>Você dá as instruções</span></div>
+          <div class="orb-container"><div class="orb-back"></div><div class="orb"><span class="orb-star">✳</span></div></div>
+          <div class="visual-card glass-small bottom-message"><span class="online-dot"></span><span>Seu agente aprende como ajudar</span></div>
+          <div class="visual-caption">IDEIA → INSTRUÇÕES → TESTE → MELHORIA</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="notice-banner container" role="note"><span class="notice-icon">i</span><p><strong>Uma informação importante:</strong> no Gemini, um assistente personalizado pode ser chamado de <strong>Habilidade (Skill)</strong>. Você não precisa saber programar. Algumas contas ainda podem mostrar menus diferentes; há um plano B neste site.</p></div>
+
+    <section class="container live-lab reveal" id="demo-lab" aria-labelledby="demo-title">
+      <div class="lab-intro">
+        <div><span class="lab-overline"><span class="lab-indicator"></span> LABORATÓRIO INTERATIVO · EXPERIÊNCIA LOCAL</span><h2 id="demo-title">Antes de criar, <em>experimente.</em></h2><p>Escolha uma pergunta e veja como um tutor bem instruído <strong>poderia</strong> responder. Este exemplo é uma simulação do site, não uma conversa real com o Gemini.</p></div>
+        <div class="lab-stamp">01 <span>Explorar</span></div>
+      </div>
+      <div class="lab-grid">
+        <div class="lab-choices" role="group" aria-label="Escolha uma pergunta para simular">
+          <p class="lab-mini-label">ESCOLHA UM DESAFIO</p>
+          <button type="button" class="scenario-btn active" data-scenario="fractions" aria-pressed="true"><span class="scenario-icon">🍕</span><span><strong>Não entendo frações</strong><small>Aprender com exemplos simples</small></span><span aria-hidden="true">↗</span></button>
+          <button type="button" class="scenario-btn" data-scenario="photosynthesis" aria-pressed="false"><span class="scenario-icon">🌿</span><span><strong>O que é fotossíntese?</strong><small>Explicação em linguagem fácil</small></span><span aria-hidden="true">↗</span></button>
+          <button type="button" class="scenario-btn" data-scenario="study" aria-pressed="false"><span class="scenario-icon">📚</span><span><strong>Como estudar melhor?</strong><small>Aprender um passo de cada vez</small></span><span aria-hidden="true">↗</span></button>
+          <div class="scenario-lesson"><strong>O que observar?</strong><p>O bom assistente usa palavras simples, explica com exemplo e verifica se você entendeu.</p></div>
+        </div>
+        <div class="chat-device" aria-label="Simulação local de conversa com um agente tutor">
+          <div class="chat-device-header"><span class="chat-avatar">✳</span><div><strong>Tutor Paciente</strong><small><span class="lab-indicator"></span> exemplo de resposta</small></div><span class="chat-demo-badge">DEMONSTRAÇÃO</span></div>
+          <div class="chat-screen" id="chat-screen" aria-live="polite" aria-atomic="true">
+            <div class="chat-message user-chat"><span class="chat-person">VOCÊ</span><p id="demo-question">Não entendo frações. Pode explicar?</p></div>
+            <div class="chat-message assistant-chat"><span class="chat-person">✳ TUTOR PACIENTE</span><p id="demo-answer">Imagine uma pizza cortada em 4 pedaços iguais. Se você come 1 pedaço, comeu <strong>1/4 da pizza</strong>. O número de baixo mostra em quantas partes dividimos; o de cima, quantas pegamos.</p><div class="chat-coach" id="demo-followup">Vamos tentar? Se eu comer 2 pedaços de uma pizza com 4, que fração comi?</div></div>
+          </div>
+          <div class="chat-footnote"><span aria-hidden="true">✦</span> Esta conversa é ilustrativa. Para conversar de verdade, use o Gemini.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section intro-section" id="roteiro">
+      <div class="section-heading"><span class="kicker">SEU MAPA DE APRENDIZAGEM</span><h2>Um caminho. Duas missões.</h2><p>Você vai seguir as etapas na ordem. Quando terminar uma etapa, marque como concluída e avance.</p></div>
+      <div class="journey-grid">
+        <a class="journey-card" href="#preparacao"><span class="journey-index">00</span><div class="journey-emoji">🖥️</div><h3>Preparação</h3><p>Entrar no Gemini e identificar os botões.</p><span class="journey-arrow">↗</span></a>
+        <a class="journey-card" href="#missao-1"><span class="journey-index">01</span><div class="journey-emoji">🤝</div><h3>Vamos fazer juntos</h3><p>Criar o mesmo assistente que toda a turma.</p><span class="journey-arrow">↗</span></a>
+        <a class="journey-card" href="#missao-2"><span class="journey-index">02</span><div class="journey-emoji">🎨</div><h3>Agora é com você</h3><p>Escolher uma ideia e personalizar seu agente.</p><span class="journey-arrow">↗</span></a>
+        <a class="journey-card" href="#conclusao"><span class="journey-index">03</span><div class="journey-emoji">🏆</div><h3>Desafio final</h3><p>Testar, melhorar e mostrar o resultado.</p><span class="journey-arrow">↗</span></a>
+      </div>
+      <div class="progress-shell"><div class="progress-top"><span><span class="progress-glyph">✦</span> Seu progresso nesta oficina</span><strong id="progress-label" aria-live="polite">0 de 8 passos</strong></div><div class="progress-bar" role="progressbar" aria-label="Progresso da oficina" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" id="progress-track"><div class="progress-fill" id="progress-fill"></div></div><button id="reset-progress" class="text-button" type="button">Recomeçar o progresso</button></div>
+    </section>
+
+    <div class="content-layout container">
+      <aside class="lesson-sidebar" aria-label="Etapas da oficina">
+        <div class="sidebar-box"><div class="sidebar-caption">SEU GUIA</div><a href="#preparacao" class="sidebar-link">00 <span>Antes de começar</span></a><a href="#missao-1" class="sidebar-link">01 <span>Missão em grupo</span></a><a href="#missao-2" class="sidebar-link">02 <span>Missão personalizada</span></a><a href="#conclusao" class="sidebar-link">03 <span>Desafio final</span></a><a href="#ajuda" class="sidebar-link">? <span>Ajuda e dúvidas</span></a><div class="sidebar-tip"><span>💡</span><p>Deixe este site em uma aba e o Gemini em outra. Use <kbd>Ctrl</kbd> + <kbd>Tab</kbd> para alternar.</p></div></div>
+      </aside>
+      <div class="lesson-main">
+        <section id="preparacao" class="lesson-section" aria-labelledby="prep-title">
+          <div class="lesson-heading"><span class="mission-badge badge-neutral">ETAPA 00 · PREPARAÇÃO</span><h2 id="prep-title">Antes de começar</h2><p>Vamos deixar o computador pronto. É rapidinho!</p></div>
+          <article class="step-card"><div class="step-title"><span class="step-number">1</span><h3>Abra o Google Gemini</h3></div><p>Abra o navegador (Chrome, Edge ou outro) e clique no botão abaixo. Vai abrir uma <strong>nova aba</strong>.</p><a class="btn btn-purple" href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">Abrir o Gemini <span aria-hidden="true">↗</span></a><div class="tip-box"><strong>💡 Dica:</strong> não feche esta página. Você vai voltar aqui para copiar as instruções.</div><label class="done-check"><input type="checkbox" data-step="open-gemini"/><span>Consegui abrir o Gemini</span></label></article>
+          <article class="step-card"><div class="step-title"><span class="step-number">2</span><h3>Entre com sua conta Google</h3></div><p>Se o site pedir para entrar, clique em <strong>Fazer login</strong> e use sua própria conta Google. Não compartilhe sua senha com colegas.</p><p>Para criar Habilidades, o Google informa que é necessário ter <strong>18 anos ou mais</strong>, uma conta elegível e o recurso disponível nela. Se for uma conta da escola ou a opção não aparecer, use nosso <a href="#plano-b">Plano B</a>.</p><label class="done-check"><input type="checkbox" data-step="login"/><span>Entrei na minha conta (ou vou usar o Plano B)</span></label></article>
+          <article class="step-card"><div class="step-title"><span class="step-number">3</span><h3>Encontre o lugar de criar sua Habilidade</h3></div><p>Olhe para a <strong>parte esquerda</strong> da tela do Gemini. Procure <strong>Personalizar</strong> (às vezes dentro de <strong>Mais</strong>). Depois abra <strong>Habilidades</strong>.</p><div class="screen-demo" role="img" aria-label="Ilustração didática: na lateral do Gemini, primeiro Personalizar ou Mais e depois Habilidades. O desenho não é uma captura real do serviço.">
+            <div class="screen-top"><div class="window-dots"><i></i><i></i><i></i></div><span>gemini.google.com</span><span>↗</span></div>
+            <div class="screen-content"><div class="screen-side"><div class="screen-logo">✦ <b>Gemini</b></div><div class="screen-item">☰ <span>Menu</span></div><div class="screen-item">✚ <span>Nova conversa</span></div><div class="screen-item">⋯ <span>Mais</span></div><div class="screen-item screen-focus"><span>✧</span><b>Personalizar</b><span class="callout-circle">1</span></div><div class="screen-item screen-focus-secondary"><span>▦</span><b>Habilidades</b><span class="callout-circle circle-alt">2</span></div></div><div class="screen-mid"><div class="screen-dash"></div><div class="screen-dash short"></div><div class="screen-prompt">Pergunte algo ao Gemini... <span>➤</span></div></div></div>
+            <div class="screen-footer">ILUSTRAÇÃO DIDÁTICA · posição e nomes podem variar conforme a versão da sua conta</div>
+          </div>
+          <div class="walkthrough" aria-label="Guia interativo dos cliques no Gemini">
+            <div class="walkthrough-title"><strong>🧭 Guia de cliques</strong><span>Escolha cada número para ver o que fazer</span></div>
+            <div class="walkthrough-nav" role="group" aria-label="Passos visuais no Gemini">
+              <button type="button" class="walk-dot selected" data-walk="0" aria-pressed="true"><span>1</span> Personalizar</button>
+              <button type="button" class="walk-dot" data-walk="1" aria-pressed="false"><span>2</span> Habilidades</button>
+              <button type="button" class="walk-dot" data-walk="2" aria-pressed="false"><span>3</span> Criar</button>
+              <button type="button" class="walk-dot" data-walk="3" aria-pressed="false"><span>4</span> Salvar</button>
+            </div>
+            <div class="walkthrough-response" aria-live="polite"><div class="walkthrough-emblem" id="walk-icon">◫</div><div><strong id="walk-title">Clique em Personalizar</strong><p id="walk-description">Olhe na lateral esquerda do Gemini. Se não aparecer, abra Mais antes de continuar.</p></div></div>
+          </div>
+          <p>Ao abrir <strong>Habilidades</strong>, procure o botão <strong>Criar</strong> e escolha <strong>Criar manualmente</strong>. Vamos preencher os campos no próximo passo.</p><div class="inline-signal">👀 <span><strong>Não achou?</strong> Sem problema. Veja o <a href="#plano-b">caminho alternativo</a> e siga com a turma.</span></div><label class="done-check"><input type="checkbox" data-step="find-skills"/><span>Encontrei Habilidades (ou identifiquei o Plano B)</span></label></article>
+        </section>
+
+        <section id="missao-1" class="lesson-section" aria-labelledby="m1-title"><div class="lesson-heading"><span class="mission-badge badge-one">MISSÃO 01 · TODOS JUNTOS</span><h2 id="m1-title">Vamos criar um agente em grupo!</h2><p>Nesta missão, todos vão montar o mesmo assistente: um tutor que explica qualquer matéria com paciência.</p></div>
+          <div class="agent-profile"><div class="agent-avatar avatar-learning">✳</div><div><span class="agent-mini">NOSSO PRIMEIRO AGENTE</span><h3>Tutor Paciente</h3><p>Um ajudante para estudar, tirar dúvidas e aprender no seu ritmo.</p></div><span class="agent-status"><span></span> Projeto da turma</span></div>
+          <article class="step-card"><div class="step-title"><span class="step-number">4</span><h3>Preencha o nome, a descrição e as instruções</h3></div><p>Na página de criação do Gemini, você verá campos parecidos com os abaixo. <strong>Copie cada texto e cole no campo correspondente.</strong></p>
+            <div class="copy-field"><div class="copy-field-head"><span>CAMPO 1 · NOME</span><button class="copy-btn" type="button" data-copy="shared-name">⧉ Copiar</button></div><p id="shared-name">tutor-paciente</p></div>
+            <div class="copy-field"><div class="copy-field-head"><span>CAMPO 2 · DESCRIÇÃO</span><button class="copy-btn" type="button" data-copy="shared-desc">⧉ Copiar</button></div><p id="shared-desc">Ajuda estudantes a entender assuntos difíceis com palavras simples, exemplos e perguntas para praticar.</p></div>
+            <div class="copy-field"><div class="copy-field-head"><span>CAMPO 3 · INSTRUÇÕES</span><button class="copy-btn" type="button" data-copy="shared-instructions">⧉ Copiar</button></div><pre id="shared-instructions">Você é o Tutor Paciente, um assistente de estudos amigável.
+
+Seu objetivo é ajudar estudantes iniciantes a entender qualquer assunto sem complicar.
+
+Quando alguém pedir ajuda:
+1. Pergunte qual é o assunto e o que a pessoa já sabe, se isso não estiver claro.
+2. Explique usando palavras simples, como em uma conversa.
+3. Dê um exemplo próximo do dia a dia.
+4. Faça uma pergunta de cada vez para ver se a pessoa entendeu.
+5. Se a resposta estiver errada, explique novamente com calma, sem julgar.
+6. Se não souber algo, admita a dúvida. Não invente informações.
+
+Regras:
+- Seja gentil e paciente.
+- Evite palavras muito técnicas sem explicar.
+- Não entregue a resposta completa de um exercício antes de ajudar a pessoa a pensar.
+- Use respostas curtas e organizadas, com exemplos quando necessário.
+- Responda sempre em português brasileiro, salvo se a pessoa pedir outro idioma.</pre></div>
+            <div class="keyboard-tip"><span>⌨</span><p><strong>Como colar:</strong> clique no campo do Gemini e aperte <kbd>Ctrl</kbd> + <kbd>V</kbd>. Para voltar a esta aba, aperte <kbd>Ctrl</kbd> + <kbd>Tab</kbd>.</p></div>
+            <p>Quando terminar, procure o botão <strong>Criar</strong> e clique nele. Pronto: a habilidade deverá ficar salva na sua conta, se o recurso estiver liberado.</p><details class="alternate-path"><summary>✨ Quer criar conversando com o Gemini em vez de preencher campos?</summary><p>Na página <strong>Habilidades</strong>, escolha <strong>Criar → Criar com o Gemini</strong>. Diga: “Crie uma habilidade chamada tutor-paciente para ensinar assuntos difíceis com palavras simples, exemplos e uma pergunta de cada vez.” Revise antes de salvar. Esse é outro caminho oficial do Google.</p></details>
+            <label class="done-check"><input type="checkbox" data-step="first-skill"/><span>Preenchi as informações e criei o Tutor Paciente</span></label></article>
+          <article class="step-card"><div class="step-title"><span class="step-number">5</span><h3>Converse com o assistente e veja se funciona</h3></div><p>Abra uma conversa do Gemini. Se sua habilidade foi criada, digite <kbd>/</kbd> e procure <strong>tutor-paciente</strong> no menu. Selecione a habilidade e envie uma pergunta.</p><p>Experimente copiar estes testes, <strong>um de cada vez</strong>:</p>
+            <div class="test-list"><div class="test-prompt"><span>TESTE 01</span><p id="test-one">Não entendo frações. Você pode explicar como se eu nunca tivesse estudado isso?</p><button class="copy-btn" type="button" data-copy="test-one">⧉ Copiar</button></div><div class="test-prompt"><span>TESTE 02</span><p id="test-two">Ainda não entendi. Pode me dar um exemplo usando pizza?</p><button class="copy-btn" type="button" data-copy="test-two">⧉ Copiar</button></div><div class="test-prompt"><span>TESTE 03</span><p id="test-three">Agora faça uma pergunta para descobrir se eu aprendi. Não me dê a resposta antes de tentar.</p><button class="copy-btn" type="button" data-copy="test-three">⧉ Copiar</button></div></div>
+            <div class="reflection"><strong>🔎 Observe:</strong> ele explicou de forma simples? Deu exemplos? Fez perguntas? Se não, podemos <strong>editar as instruções</strong> e testar de novo. Isso faz parte de criar IA!</div>
+            <label class="done-check"><input type="checkbox" data-step="first-test"/><span>Testei meu primeiro assistente e observei suas respostas</span></label></article>
+        </section>
+
+        <section id="missao-2" class="lesson-section" aria-labelledby="m2-title"><div class="lesson-heading"><span class="mission-badge badge-two">MISSÃO 02 · CRIAÇÃO LIVRE</span><h2 id="m2-title">Agora crie um agente com a sua cara</h2><p>Todo mundo aprendeu o caminho. Agora você escolhe <strong>para que seu agente vai servir</strong>. As sugestões abaixo ajudam a começar.</p></div>
+          <article class="step-card"><div class="step-title"><span class="step-number">6</span><h3>Escolha uma ideia para o seu agente</h3></div><p>Clique em uma opção. Não precisa saber nada de programação: nós vamos preparar um modelo de instruções que você pode ajustar.</p>
+            <div class="idea-grid" id="idea-grid" role="group" aria-label="Ideias de agentes"><button type="button" class="idea-card selected" data-idea="ingles" aria-pressed="true"><span>🗣️</span><strong>Professor de inglês</strong><small>Conversação para iniciantes</small></button><button type="button" class="idea-card" data-idea="tarefas" aria-pressed="false"><span>📅</span><strong>Organizador de tarefas</strong><small>Rotina sem complicação</small></button><button type="button" class="idea-card" data-idea="historias" aria-pressed="false"><span>📚</span><strong>Criador de histórias</strong><small>Imaginação e criatividade</small></button><button type="button" class="idea-card" data-idea="estudos" aria-pressed="false"><span>🎓</span><strong>Planejador de estudos</strong><small>Estude com organização</small></button><button type="button" class="idea-card" data-idea="apresentacoes" aria-pressed="false"><span>🎤</span><strong>Treinador de apresentações</strong><small>Falar em público</small></button><button type="button" class="idea-card" data-idea="jogos" aria-pressed="false"><span>🎮</span><strong>Criador de ideias de jogos</strong><small>Invente seus próprios jogos</small></button></div>
+            <div class="builder" id="builder"><div class="builder-heading"><h4>Personalize seu agente</h4><span>EDITE COMO QUISER</span></div><div class="builder-form"><label for="custom-name">Qual será o nome do seu agente?<input id="custom-name" type="text" maxlength="65" autocomplete="off" value="Amigo do Inglês" placeholder="Ex.: Amigo do Inglês"/></label><label for="custom-audience">Quem ele vai ajudar?<input id="custom-audience" type="text" maxlength="110" autocomplete="off" value="pessoas que estão começando a aprender inglês" placeholder="Ex.: estudantes iniciantes"/></label><label for="custom-tone">Como ele deve conversar?<select id="custom-tone"><option value="gentil e paciente, com palavras simples">De forma gentil e paciente</option><option value="animada e divertida, mas sem perder a clareza">De forma divertida</option><option value="direta e organizada, com frases curtas">De forma direta e organizada</option><option value="criativa e motivadora, com muitos exemplos">De forma criativa</option></select></label><label for="custom-rule">Uma regra importante para ele seguir:<input id="custom-rule" type="text" maxlength="220" value="Corrija os erros sem constranger o estudante." placeholder="Ex.: dê um exemplo antes de perguntar"/></label></div><div class="builder-insight" aria-live="polite"><div class="builder-insight-icon" aria-hidden="true">✦</div><div class="builder-insight-copy"><span>PRÉVIA DO SEU AGENTE</span><strong id="preview-name">Amigo do Inglês</strong><p id="preview-purpose">Uma habilidade feita para ajudar pessoas que estão começando a aprender inglês.</p><div class="quality-bar"><span id="quality-fill"></span></div><small id="quality-tip">Personalize nome, público e regra para deixar suas instruções mais úteis.</small></div></div><p class="skill-name-note">💡 No Gemini, o nome da habilidade usa letras minúsculas e hífens. Exemplo: <strong>amigo-do-ingles</strong>. Vamos adaptar seu nome automaticamente.</p><button type="button" id="generate-btn" class="btn btn-primary generate-btn">✦ Gerar minhas instruções</button></div>
+            <div id="builder-output" class="builder-output" hidden aria-live="polite"><div class="builder-output-heading"><div><span>SUAS INSTRUÇÕES ESTÃO PRONTAS</span><h4>Copie para o Gemini</h4></div><span class="success-pill">✓ Criado</span></div><div class="copy-field"><div class="copy-field-head"><span>NOME DO AGENTE</span><button class="copy-btn" type="button" data-copy="result-name">⧉ Copiar</button></div><p id="result-name"></p></div><div class="copy-field"><div class="copy-field-head"><span>DESCRIÇÃO</span><button class="copy-btn" type="button" data-copy="result-description">⧉ Copiar</button></div><p id="result-description"></p></div><div class="copy-field"><div class="copy-field-head"><span>INSTRUÇÕES</span><button class="copy-btn" type="button" data-copy="result-instructions">⧉ Copiar</button></div><pre id="result-instructions"></pre></div><p>Volte ao Gemini e crie uma <strong>nova habilidade</strong> pelo mesmo caminho da Missão 01. Cole os três textos nos respectivos campos e clique em <strong>Criar</strong>.</p></div>
+            <label class="done-check"><input type="checkbox" data-step="choose-idea"/><span>Escolhi e personalizei a ideia do meu agente</span></label></article>
+          <article class="step-card"><div class="step-title"><span class="step-number">7</span><h3>Crie, teste e melhore o seu agente</h3></div><p>Crie uma nova habilidade no Gemini usando os textos que você gerou. Em seguida, faça <strong>três perguntas diferentes</strong> para descobrir se ela segue suas regras.</p><div class="mini-steps"><div><span>1</span><p><strong>Crie:</strong> dê um nome, uma descrição e instruções.</p></div><div><span>2</span><p><strong>Teste:</strong> faça perguntas reais relacionadas à tarefa dele.</p></div><div><span>3</span><p><strong>Melhore:</strong> se a resposta não agradar, edite as instruções e tente novamente.</p></div></div><div class="tip-box"><strong>💡 Uma boa pergunta:</strong> “O meu agente fez o que eu pedi? Como posso deixar as instruções mais claras?”</div><label class="done-check"><input type="checkbox" data-step="custom-test"/><span>Criei meu agente, testei e fiz pelo menos uma melhoria</span></label></article>
+        </section>
+
+        <section id="conclusao" class="lesson-section" aria-labelledby="finish-title"><div class="lesson-heading"><span class="mission-badge badge-finish">DESAFIO FINAL · SUA CONQUISTA</span><h2 id="finish-title">Você criou seu primeiro agente! 🎉</h2><p>Agora vamos conferir o que você aprendeu e mostrar para a turma.</p></div><article class="step-card"><div class="step-title"><span class="step-number">8</span><h3>Mostre o que seu agente sabe fazer</h3></div><p>Apresente para um colega ou para o professor:</p><ul class="finish-list"><li><strong>Nome:</strong> como seu agente se chama?</li><li><strong>Função:</strong> qual problema ele ajuda a resolver?</li><li><strong>Exemplo:</strong> mostre uma pergunta e a resposta que ele deu.</li><li><strong>Melhoria:</strong> o que você mudou para deixá-lo melhor?</li></ul><div class="knowledge-check" aria-labelledby="quiz-title"><span class="quiz-kicker">DESAFIO RELÂMPAGO · 30 SEGUNDOS</span><h4 id="quiz-title">Qual instrução ajudaria mais uma IA?</h4><div class="quiz-options" role="group" aria-label="Escolha a melhor instrução"><button type="button" data-quiz="vague">“Explique bem as coisas.”</button><button type="button" data-quiz="specific">“Explique com palavras simples, dê um exemplo e faça uma pergunta.”</button></div><p class="quiz-feedback" id="quiz-feedback" role="status">Escolha uma opção acima para conferir.</p></div><div class="reflection">🎯 <strong>Você aprendeu o principal:</strong> criar um agente começa por explicar <em>o que ele faz</em>, <em>como deve responder</em> e <em>quais regras deve seguir</em>.</div><label class="done-check"><input type="checkbox" data-step="finish"/><span>Apresentei meu agente e concluí a oficina!</span></label></article><div class="congrats" id="congrats" hidden><span>🏆</span><h3>Missão concluída!</h3><p>Parabéns! Você criou, testou e personalizou seu primeiro assistente de IA.</p><button type="button" id="print-btn" class="btn btn-primary">🖨 Imprimir minha conquista</button></div></section>
+
+        <section id="ajuda" class="lesson-section" aria-labelledby="help-title"><div class="lesson-heading"><span class="mission-badge badge-neutral">PRECISANDO DE UMA MÃO?</span><h2 id="help-title">Dúvidas mais comuns</h2><p>Se algo não apareceu igual ao tutorial, veja estas respostas antes de pedir ajuda.</p></div>
+          <div class="faq-list"><details id="plano-b" open><summary>❓ Não encontrei “Habilidades” no meu Gemini. E agora?</summary><div class="faq-content"><p><strong>Isso pode acontecer!</strong> O Google está liberando esse recurso aos poucos. Primeiro, confira se você está conectado com sua conta Google pessoal, se tem 18 anos ou mais e se a opção de atividade exigida pelo Gemini está ativada. Não altere as configurações da conta escolar sem orientação.</p><p><strong>Plano B para continuar a aula:</strong></p><ol><li>Entre em <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer">gemini.google.com</a> e abra uma <strong>nova conversa</strong>.</li><li>Copie as <strong>Instruções</strong> do Tutor Paciente na Missão 01 (ou as instruções do seu agente na Missão 02).</li><li>No início da mensagem, escreva: <strong>“Durante esta conversa, siga estas instruções:”</strong> e cole o texto logo abaixo.</li><li>Envie a mensagem e faça os três testes normalmente.</li></ol><p><strong>Atenção:</strong> assim você terá um <em>assistente personalizado dentro daquela conversa</em>, mas não terá criado uma habilidade reutilizável salva na lista de Habilidades. Mesmo assim, poderá aprender a escrever e testar instruções.</p></div></details>
+          <details><summary>🔐 O Gemini está pedindo uma conta. O que faço?</summary><div class="faq-content"><p>Entre com sua conta Google pessoal, caso ela seja elegível. Nunca digite sua senha no site desta oficina, em um documento compartilhado ou no computador de um colega. O login é feito diretamente no Google.</p></div></details>
+          <details><summary>📋 Eu apertei “Copiar”, mas não sei onde colar.</summary><div class="faq-content"><p>Volte à aba do Gemini, clique dentro do campo certo e aperte <kbd>Ctrl</kbd> + <kbd>V</kbd> no teclado. Repita para nome, descrição e instruções. Não cole tudo no campo do nome.</p></div></details>
+          <details><summary>🤔 Meu agente não responde como pedi.</summary><div class="faq-content"><p>Isso é normal. Leia a resposta, identifique o problema e deixe a regra mais específica. Exemplo: em vez de “seja claro”, escreva “explique em até cinco frases e sempre dê um exemplo simples”. Depois, teste novamente.</p></div></details>
+          <details><summary>🧩 “Habilidade” e “agente” são a mesma coisa?</summary><div class="faq-content"><p>Nesta aula, usamos a palavra <em>agente</em> para um assistente configurado com um objetivo e regras. No Gemini, o recurso ensinado é uma <strong>Habilidade (Skill)</strong>: um conjunto de instruções reutilizáveis. Isso não significa que a IA vá executar tarefas sozinha o dia inteiro, sem sua participação.</p></div></details>
+          <details><summary>🛡️ O que não devo colocar nas instruções?</summary><div class="faq-content"><p>Não inclua senhas, documentos pessoais, números de cartão, endereço de casa, informações médicas privadas ou dados de outras pessoas. Se precisar usar um exemplo, invente dados fictícios.</p></div></details></div>
+          <div class="resources"><h3>Quer aprender mais? Fontes oficiais</h3><p>Este material foi elaborado com base na documentação do Google. As telas são ilustrações didáticas, não capturas reais da conta de um aluno.</p><a href="https://support.google.com/gemini/answer/17094296?hl=pt-BR&co=GENIE.Platform%3DDesktop" target="_blank" rel="noopener noreferrer">Como criar e gerenciar Habilidades ↗</a><a href="https://support.google.com/gemini/answer/17102773?hl=pt-BR" target="_blank" rel="noopener noreferrer">Como escrever boas instruções ↗</a><a href="https://support.google.com/gemini/answer/18560919?hl=pt-BR" target="_blank" rel="noopener noreferrer">Sobre a transição de Gems para Habilidades ↗</a><small>Material independente e educativo. Não é um produto oficial ou afiliado ao Google. Interface e disponibilidade podem mudar.</small></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <div class="mission-dock" id="mission-dock" aria-label="Continuar a oficina"><span class="dock-spark" aria-hidden="true">✦</span><span class="dock-copy"><strong id="dock-title">Sua próxima missão</strong><small id="dock-subtitle">Comece pelo primeiro passo</small></span><a class="dock-action" href="#preparacao" id="dock-link">Continuar <span aria-hidden="true">→</span></a><button type="button" class="dock-close" id="dock-close" aria-label="Fechar lembrete">×</button></div>
+  <div class="celebrate" id="celebrate" aria-hidden="true"></div>
+  <footer class="footer"><div class="container footer-inner"><div><a class="brand" href="#inicio"><span class="brand-mark">✦</span><span>MEU <strong>PRIMEIRO AGENTE</strong></span></a><p>Aprender inteligência artificial começa com uma boa ideia.</p></div><div class="footer-right"><span>Feito para aprender, experimentar e criar.</span><a href="#inicio">Voltar ao topo ↑</a></div></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js" defer></script>
+</body>
+</html>
