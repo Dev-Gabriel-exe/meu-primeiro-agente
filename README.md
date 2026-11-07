@@ -15,19 +15,16 @@ O site inclui:
 
 Abra `index.html` no navegador. O site também funciona sem internet para a leitura e para o gerador de instruções (mas o Gemini precisa de internet).
 
-## Publicar no GitHub Pages (sem workflow personalizado)
+## Publicar no GitHub Pages (configuração inicial)
 
-1. Acesse **https://github.com/new?name=meu-primeiro-agente** e crie um repositório chamado **`meu-primeiro-agente`** como **Public**.
-2. Envie para a raiz da branch `main` os arquivos `index.html`, `styles.css`, `script.js`, `favicon.svg`, `.nojekyll`, `README.md` e `GUIA-PROFESSOR.md`. Pelo navegador, use **Add file → Upload files** (extraia o ZIP antes; não envie apenas o ZIP).
-3. No repositório, abra **Settings → Pages**.
-4. Na seção **Build and deployment**, em **Source**, escolha **Deploy from a branch**.
-5. Em **Branch**, selecione **main** e **/(root)**, depois clique em **Save**.
-6. Depois da publicação, acesse `https://SEU-USUARIO.github.io/meu-primeiro-agente/` (troque `SEU-USUARIO` pelo login real).
-7. Gere seu QR code a partir do endereço **que estiver abrindo normalmente** no navegador.
+O código da oficina já está na branch `main`. Resta ativar o Pages uma única vez:
 
-> O GitHub Pages, nesse modo, publica os arquivos da branch. Você não precisa criar um workflow próprio; o GitHub ainda pode executar internamente um workflow de publicação do Pages. A presença de `.nojekyll` evita a etapa de compilação Jekyll. Segundo a documentação, os runners padrão de Actions são gratuitos em repositórios públicos.
->
-> A publicação pode levar algum tempo; espere a mensagem de confirmação em Settings → Pages e teste em uma janela anônima.
+1. Abra **https://github.com/Dev-Gabriel-exe/meu-primeiro-agente/settings/pages**.
+2. Em **Build and deployment → Source**, escolha **Deploy from a branch**.
+3. Em **Branch**, selecione **main** e **/(root)** e clique em **Save**.
+4. Confira o link **https://dev-gabriel-exe.github.io/meu-primeiro-agente/** depois que o GitHub indicar a publicação.
+
+Não é preciso criar nem financiar um workflow personalizado. O GitHub pode criar e executar internamente o fluxo de publicação do Pages. Este site é composto somente de HTML, CSS, JavaScript e SVG, sem dependências, APIs ou chaves.
 
 ## Atualizações
 
